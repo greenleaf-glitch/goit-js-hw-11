@@ -1,0 +1,88 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  background-color: rgb(174, 174, 174);
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 30px;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(38, 92, 253, 0.5);
+  font-size: 25px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.gallery {
+  width: 100%;
+  margin: 30 auto;
+  display: flex;
+  column-gap: 20px;
+  row-gap: 40px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  user-select: none;
+}
+
+.photo-card {
+}
+
+.img-preview {
+  display: block;
+  object-fit: cover;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.info {
+  color: black;
+  padding-left: 35px;
+  font-size: 15px;
+}
+
+.info-item {
+}
+
+.img-card {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  background-color: aliceblue;
+}
+
+.submit-button {
+  font-size: 15px;
+  border-radius: 5px;
+  height: 30px;
+  background-color: rgb(2, 2, 28);
+  color: white;
+  user-select: none;
+}
+
+.input {
+  width: 300px;
+  height: fit-content;
+  font-size: 15px;
+}
+
+.div {
+  width: 1px;
+  height: 1px;
+  background-color: transparent;
+}
