@@ -7,8 +7,9 @@ const PIXABAY_API_URL = 'https://pixabay.com/api/';
 
 export async function getIMGByQuery(query, pageNum, perPageNum) {
   try {
-    const response = await axios.get(PIXABAY_API_URL, {
+    const response = await axios(PIXABAY_API_URL, {
       params: {
+        method: 'get',
         key: '15414198-72fccac02b5eb93f67efa29c9',
         q: query,
         image_type: 'photo',
