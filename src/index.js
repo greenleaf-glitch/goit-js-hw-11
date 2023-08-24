@@ -69,7 +69,7 @@ async function onFormSubmit(evt) {
         'Sorry, there are no images matching your search query. Please try again.'
       );
     }
-  } catch {
+  } catch (err) {
     Notify.failure('Oops! Something went wrong! Try reloading the page!');
   }
   evt.target.reset();
