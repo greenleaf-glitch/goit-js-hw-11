@@ -3,11 +3,9 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const axios = require('axios');
 
-const PIXABAY_API_URL = 'https://pixabay.com/api/';
-
 export async function getIMGByQuery(query, pageNum, perPageNum) {
   try {
-    const response = await axios(PIXABAY_API_URL, {
+    const response = await axios('https://pixabay.com/api/', {
       params: {
         method: 'get',
         key: '15414198-72fccac02b5eb93f67efa29c9',
