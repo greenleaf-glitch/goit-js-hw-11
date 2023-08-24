@@ -28,6 +28,16 @@ let perPageNum = 40;
 let pageNum;
 let maxPage;
 
+const params = new URLSearchParams({
+  key: '15414198-72fccac02b5eb93f67efa29c9',
+  q: query,
+  image_type: 'photo',
+  orientation: 'horizontal',
+  safesearch: true,
+  page: pageNum,
+  per_page: perPageNum,
+});
+
 // ==========================================
 
 refs.form.addEventListener('submit', onFormSubmit);
