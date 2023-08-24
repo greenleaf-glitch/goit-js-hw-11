@@ -5,9 +5,6 @@ const axios = require('axios');
 
 const PIXABAY_URL = 'https://pixabay.com/api/';
 
-axios.defaults.headers.common['x-api-key'] =
-  '15414198-72fccac02b5eb93f67efa29c9';
-
 export async function getIMGByQuery(query, pageNum, perPageNum) {
   try {
     const response = await axios(PIXABAY_URL, {
