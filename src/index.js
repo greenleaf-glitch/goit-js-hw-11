@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { getIMGByQuery } from './js/helper.js';
 import SimpleLightbox from 'simplelightbox';
