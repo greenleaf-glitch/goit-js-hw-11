@@ -124,6 +124,7 @@ function templateCard(
 }
 
 async function loadMore() {
+  pageNum += 1;
   try {
     const data = await getIMGByQuery(query, pageNum, perPageNum);
     const dataArr = data.data.hits;
@@ -139,7 +140,6 @@ async function loadMore() {
     behavior: 'smooth',
   });
   updateStatusObserver();
-  pageNum += 1;
 }
 
 const observer = new IntersectionObserver(callback, observerOptions);
