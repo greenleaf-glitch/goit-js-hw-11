@@ -27,7 +27,7 @@ let perPageNum = 40;
 let pageNum;
 let maxPage;
 
-// ==========================================
+// =========================================================
 
 refs.form.addEventListener('submit', onFormSubmit);
 
@@ -124,8 +124,6 @@ function templateCard(
 }
 
 async function loadMore() {
-  pageNum += 1;
-
   try {
     const data = await getIMGByQuery(query, pageNum, perPageNum);
     const dataArr = data.data.hits;
@@ -141,6 +139,7 @@ async function loadMore() {
     behavior: 'smooth',
   });
   updateStatusObserver();
+  pageNum += 1;
 }
 
 const observer = new IntersectionObserver(callback, observerOptions);
@@ -154,7 +153,7 @@ function callback(entries, observer) {
 }
 
 function updateStatusObserver() {
-  if (pageNum === maxPage) {
+  if (pageNum === maxPage + 1) {
     observer.unobserve(refs.targetElem);
     Notify.failure(
       "We're sorry, but you've reached the end of search results."
