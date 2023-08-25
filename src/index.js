@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { getIMGByQuery } from './js/helper.js';
 import SimpleLightbox from 'simplelightbox';
@@ -27,16 +26,6 @@ let query = '';
 let perPageNum = 40;
 let pageNum;
 let maxPage;
-
-const params = new URLSearchParams({
-  key: '15414198-72fccac02b5eb93f67efa29c9',
-  q: query,
-  image_type: 'photo',
-  orientation: 'horizontal',
-  safesearch: true,
-  page: pageNum,
-  per_page: perPageNum,
-});
 
 // ==========================================
 
@@ -79,7 +68,7 @@ async function onFormSubmit(evt) {
         'Sorry, there are no images matching your search query. Please try again.'
       );
     }
-  } catch (err) {
+  } catch {
     Notify.failure('Oops! Something went wrong! Try reloading the page!');
   }
   evt.target.reset();
